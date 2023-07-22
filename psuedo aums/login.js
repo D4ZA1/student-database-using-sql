@@ -10,7 +10,7 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(session({
-  secret: '12345612',
+  secret: 'yoursecret',
   resave: false,
   saveUninitialized: true
 }));
@@ -20,7 +20,7 @@ app.use(express.static(__dirname));
 const con = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'Jaswanth84',
+  password: 'Yourpassword',
   database: 'login',
 });
 
@@ -85,11 +85,7 @@ app.get('/data', (req, res) => {
 });
 
 
-app.listen(port,'172.31.19.107',function() {
-  console.log(`Server is running on port 172.31.19.107:  ${port}`);
-});
-
-/*app.listen(port,function() {
+app.listen(port,function() {
   console.log(`Server is running on port ${port}`);
-});*/
+});
 
