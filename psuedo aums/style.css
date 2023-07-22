@@ -1,0 +1,98 @@
+.column1a {
+    float: left;
+    background-color: rgb(255, 153, 0);
+    height:398px;
+    width:40px;
+    border: 3px solid black;
+  }
+
+  .column1b {
+    float: left;
+    background-color: rgb(255, 153, 0);
+    height:398px;
+    width:200px;
+    border: 3px solid black;
+  }
+  #column3{
+    float:right;
+    height:716px;
+    width: 1469px;
+    border:3px solid black;
+    border-left: none;
+  }
+  .row1{
+    background-color:hsl(168,65%,63%);
+    height:80px;
+    width: 80px;
+    margin:0px;
+  }
+  
+  body{
+    margin:0px;
+  }
+  #extend,#marks,#attendence,#fees  {
+    margin-top: 20px;
+    margin-left:8px;
+    background-color:rgb(255, 163, 26);
+    border : 2px solid black;
+  }
+  #extend:hover,#marks:hover,#attendence:hover,#fees:hover {
+    background-color:rgb(230, 138, 0);
+    border : 2px groove black ;
+  }
+  #navig{
+    width:1514px;
+    height:80px;
+    background-color:hsl(168,65%,63%);
+    text-align: center;
+    border: 3px solid black;
+    border-bottom: none;
+  }
+
+  #navcol1,#navcol2,#navcol3{
+    float: left;
+    height:80px;
+    width:33.33%;
+  }
+
+  #logo{
+    height:60px;
+    float:left;
+    margin-top:10px;
+  }
+
+  #pfp{
+    float:right;
+    height :80px;
+  }
+  #info{
+    margin-top:10px;
+  }
+
+ 
+  h1 {
+    color:lightblue;
+    text-align: left;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

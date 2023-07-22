@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+  <title>HOME PAGE</title>
+</head>
+<body>
+  <nav id ="navig">
+    <div id="navcol1"><a href="home.html"><img src="aumssss.png" id="logo"></a></div>
+    <div id="navcol2" style="text-align:left; font-size:large"><p id="info">STUDENT NAME : </p>
+    <p id="time"></p>
+    </div>
+    <div id="navcol3"><img src="" id="pfp"></div>
+  </nav>
+  <div class="row2">
+    <div class="column1a" id="column">
+      <button id = "extend" title="EXTEND">=</button><br>
+      <button id="marks" title="MARKS" onclick="window.location.href = 'marks.html';">+</button><br>
+      <button id="attendence" title="ATTENDENCE" onclick="window.location.href = 'att.html';">#</button><br>
+    </div>
+    <div id="column3">
+      <h1>WELCOME TO AMRITA STUDENT WEBSITE</h1>
+    </div>
+  </div>
+<script>
+  const toggle = document.getElementById("extend");
+  const marks =document.getElementById("marks");
+  const attendence =document.getElementById("attendence");
+  
+  function refreshTime() {
+    const timeDisplay = document.getElementById("time");
+    const dateString = new Date().toLocaleString();
+    const formattedString = dateString.replace(", ", " - ");
+    timeDisplay.textContent = formattedString;
+  }
+    setInterval(refreshTime, 1000);
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('column3');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth'
+    });
+    calendar.render();
+  });
+
+
+  
+  toggle.onclick= function() {
+    const column = document.getElementById("column");
+   const hasClass = column.className.includes("column1a");
+
+    if (hasClass) {
+      column.className="column1b"
+      toggle.innerHTML="extend navigation"
+      marks.innerHTML="Score and marks"
+      attendence.innerHTML="Student attendence"
+      document.getElementById("column3").style.width="1309px";
+    } else {
+      column.className="column1a"
+      toggle.innerHTML="="
+      marks.innerHTML="+"
+      attendence.innerHTML="#"
+      document.getElementById("column3").style.width="1469px";
+    } 
+}
+fetch('/data')
+.then(response => response.json())
+.then(data => {
+// Display the user data
+const infor = document.getElementById('info');
+const user= data[0] || {};
+const marks = data[1] || {};
+console.log("data : ", user);
+var a=infor.innerHTML;
+infor.innerHTML = a + user.first_name || '' 
+infor.innerHTML = infor.innerHTML + "   " 
+infor.innerHTML = infor.innerHTML +  user.last_name || ''
+
+const img= document.getElementById('pfp');
+img.src=user.img || '';
+})
+.catch(error => {
+console.error('Error:', error);
+});
+</script>
+ 
+</body> 
+</html>

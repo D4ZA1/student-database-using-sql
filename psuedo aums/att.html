@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+  <title>MARKS PAGE</title>
+</head>
+<body>
+<nav id ="navig">
+  <div id="navcol1"><a href="home.html"><img src="aumssss.png" id="logo"></a></div>
+  <div id="navcol2" style="text-align:left; font-size:large"><p id="info">STUDENT NAME : </p>
+    <p id="time"></p>
+    </div>
+  <div id="navcol3"><img src="" id="pfp"></div>
+</nav>
+<div class="row2">
+  <div class="column1a" id="column">
+    <button id = "extend" title="EXTEND">=</button><br>
+    <button id="marks" title="MARKS" onclick="window.location.href = 'marks.html';">+</button><br>
+    <button id="attendence" title="ATTENDENCE" onclick="window.location.href = 'att.html';">#</button><br>
+
+  </div>
+  <div id="column3">
+    <center>  <label for="semester">Select Semester:</label>
+        <select id="tableSelect">
+            <option value="table1">Semester 1</option>
+            <option value="table2">Semester 2</option>
+
+          </select>
+          
+</center>   
+   
+
+  <table id="table1" class="table">
+    <caption>Semsester 1</caption>
+    <thead>
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name </th>
+            <th>Type</th>
+            <th>Academic Period</th> 
+            <th>Exam type</th>
+              <th>Percentage</th>
+        </tr>
+    </thead>
+    <tbody>
+       <tr>
+           <td> 19ENG111</td>
+            <td>Technical Communication</td>
+            <td>Regular Theory </td>
+            <td>2022-2023</td>
+            <td>Regular</td>
+
+            <td> </td>
+       </tr>
+     
+        <tr>
+           <td> 22ADM101</td>
+            <td>Foundations Of Indian Heritage </td>
+            <td>Regular Theory</td>
+            <td>2022-2023</td>
+            <td>Regular</td>
+
+            <td> </td>
+       </tr>
+     
+       <tr>
+           <td>22AIE101</td>
+           <td>C- Programming</td>
+            <td>Regular Practical</td>
+            <td>2022-2023</td>
+            <td>Regular</td>
+
+            <td> </td>
+             </tr>
+     
+<tr>
+           <td>22AIE102</td>
+           <td>Elements Of Computing Systems-1</td>
+            <td>Regular Practical</td>
+            <td>2022-2023</td>
+            <td>Regular</td>
+
+            <td> </td>
+       </tr>
+      <tr>
+           <td>22AVP103</td>
+           <td>Mastery Over Mind</td>
+            <td>Regular Theory</td>
+            <td>2022-2023</td>
+            <td>Regular</td>
+
+            <td> </td>
+       </tr>
+       <tr>
+           <td>22MAT110</td>
+           <td>Mathematics For Computing-1</td>
+            <td>Regular Theory</td>
+            <td>2022-2023</td>
+            <td>Regular</td>
+
+            <td> </td>
+       </tr>
+    
+        <tr>
+           <td>22MAT121</td>
+           <td>Discrete Mathematics</td>
+            <td>Regular theory</td>
+            <td>2022-2023</td>
+            <td>Regular</td>
+
+            <td> </td>
+       </tr>
+  
+        <tr>
+           <td>22PHY106</td>
+           <td>Computational Physics</td>
+            <td>Regular Theory</td>
+            <td>2022-2023</td>
+            <td>Regular</td>
+
+            <td> </td>
+       </tr>
+       <tr>
+           <td>22PHY106</td>
+           <td>Computational Physics</td>
+            <td>Regular Practical</td>
+            <td>2022-2023</td>
+            <td>Regular</td>
+
+            <td> </td>
+       </tr>
+       
+  </table>
+  
+  <table id="table2" class="table" style="display: none;">
+    <caption>Semester 2</caption>
+    <thead>
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Type</th>
+            <th>Academic Period</th> 
+            <th>Exam Type</th>
+              <th>Percentage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+           <td>22AIE111</td>
+            <td>OOP in JAVA </td>
+            <td>Regular Practical </td>
+            <td>2022-2023</td>
+            <td>Regular</td>
+
+            <td id="111"> </td>
+       </tr>
+    
+        <tr>
+           <td> 22AIE112</td>
+            <td>Data Structures & ALgorithms -1 </td>
+            <td>Regular Practical </td>
+            <td> 2022-2023</td>
+            <td>Regular </td>
+
+            <td id="112"> </td>
+       </tr>
+   
+        <tr>
+           <td> 22AIE113</td>
+            <td>Elements of computing systems-2 </td>
+            <td>Regular Practical </td>
+            <td> 2022-2023</td>
+            <td> Regular</td>
+
+            <td id="113"> </td>
+       </tr>
+       <tr>
+       <td>22AIE114</td>
+            <td>Introduction to Electrical and Electronics Engineering</td>
+            <td>Regular Theory</td>
+            <td>2022-2023</td>
+            <td>Regular</td>
+            <td id="114"> </td>
+         </tr>
+       
+       
+          <tr>
+            <td>22AIE115</td>
+            <td>User Interface Design</td>
+            <td>Regular Practical</td>
+            <td>2022-2023</td>
+            <td>Regular</td>
+
+            <td id="115"> hello</td>
+         </tr>
+      
+         <tr>
+            <td>22MAT116</td>
+            <td>Mathematics For Computing -2</td>
+            <td>Regular Practical</td>
+            <td>2022-2023</td>
+            <td>Regular</td>
+            <td id="116"> </td>
+         </tr>
+       
+    </tbody>
+</table>
+  
+  </div>
+</div>
+<script>
+    function showTable() {
+        var selectedOption = document.getElementById('tableSelect').value;
+        var tables = document.getElementsByClassName('table');
+        for (var i = 0; i < tables.length; i++) {
+          tables[i].style.display = 'none';
+        }
+        document.getElementById(selectedOption).style.display = 'table';
+      }
+    
+document.getElementById('tableSelect').addEventListener('change', showTable);
+
+
+function refreshTime() {
+    const timeDisplay = document.getElementById("time");
+    const dateString = new Date().toLocaleString();
+    const formattedString = dateString.replace(", ", " - ");
+    timeDisplay.textContent = formattedString;
+  }     
+    setInterval(refreshTime, 1000);
+
+
+  const toggle = document.getElementById("extend");
+  const marks =document.getElementById("marks");
+  const attendence =document.getElementById("attendence");
+  
+  
+  toggle.onclick= function() {
+    const column = document.getElementById("column");
+   const hasClass = column.className.includes("column1a");
+
+    if (hasClass) {
+      column.className="column1b"
+      toggle.innerHTML="extend navigation"
+      marks.innerHTML="Score and marks"
+
+      attendence.innerHTML="Student attendence"
+      document.getElementById("column3").style.width="1309px";
+    } else {
+      column.className="column1a"
+      toggle.innerHTML="="
+      marks.innerHTML="+"
+
+      attendence.innerHTML="#"
+      document.getElementById("column3").style.width="1469px";
+    } 
+}
+
+
+fetch('/data')
+.then(response => response.json())
+.then(data => {
+// Display the user data
+const infor = document.getElementById('info');
+const user= data[0] || {};
+const marks = data[1] || {};
+var a=infor.innerHTML;
+infor.innerHTML = a + user.first_name || '' + user.last_name || '';
+const img= document.getElementById('pfp');
+img.src=user.img || '';
+const oops=document.getElementById('111');
+const dsa=document.getElementById('112');
+const ecs=document.getElementById('113');
+const eee=document.getElementById('114');
+const uid=document.getElementById('115');
+const mfc=document.getElementById('116');
+uid.innerHTML=marks.UID_a
+mfc.innerHTML=marks.MFC2_a
+eee.innerHTML=marks.EEE_a
+ecs.innerHTML=marks.ECS_a
+dsa.innerHTML=marks.DSA_a
+oops.innerHTML=marks.OOPS_a
+})
+.catch(error => {
+console.error('Error:', error);
+});
+</script>
+ 
+</body> 
+</html>

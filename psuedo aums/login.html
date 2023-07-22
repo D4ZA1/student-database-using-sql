@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="loginstyle.css"">
+  <script src="login.js"></script> 
+  <title>Login Page</title>
+</head>
+<body>
+  <div id="field">
+  <fieldset  id= "box"> 
+  <form id="loginForm" method="post" action="/validate">
+    <h1>SIGN IN</h1>
+    <input type="text" id="email" name="email" placeholder="email" required><br><br>
+    <input type="password" id="password" name="password" placeholder="password" required><br>
+    <p id="error"></p>
+    <input id ="lbtn" type="submit" value="Login">
+  </fieldset>
+</div>  
+  </form>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const errorMsg = urlParams.get('error');
+    if (errorMsg == 'Invalid username') {
+      const errorMessage = document.getElementById('error');
+      errorMessage.innerHTML="please enter valid email";
+    }
+    else if (errorMsg == 'Invalid password') {
+      const errorMessage = document.getElementById('error');
+      errorMessage.innerHTML="Incorrect password";
+    }
+  </script>
+  
+</body> 
+</html>
